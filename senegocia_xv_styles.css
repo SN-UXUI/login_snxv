@@ -1,0 +1,54 @@
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&family=Sora:wght@100;200;300;400;500;700&display=swap');
+     :root {
+        --sn-hover-menu: #341980;
+        --sn-xv-primary: #4320A7;
+    }
+    
+    body {
+        background-color: #fefefe!important;
+        font-family: 'Sora', sans-serif!important;
+    }
+    
+    #menu-lateral {
+        background-color: var(--sn-xv-primary)!important;
+        color: #fff!important;
+        width: 66px!important;
+        height: 100%!important;
+        display: flex;
+        flex-direction: column!important;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #menu-lateral a,
+    i {
+        color: #fff!important;
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    #menu-lateral .side-logo {
+        margin-bottom: 22px!important;
+    }
+    
+    #menu-lateral li hr {
+        opacity: 100%!important;
+        margin: 0%;
+        border: solid 1px#fff;
+        width: 55px;
+    }
+    
+    #menu-lateral .nav-item {
+        width: 100%!important;
+    }
+    
+    #menu-lateral .nav-item :hover {
+        background-color: var(--sn-hover-menu);
+    }
+    
+    .logo_senegocia {
+        padding: 5%!important;
+    }

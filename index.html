@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SN XV</title>
+    <script src="https://kit.fontawesome.com/926b107ace.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./senegocia_xv_styles.css">
+    <style>
+        iframe {
+            height: 100% !important;
+            width: 100% !important;
+            position: fixed;
+            z-index: -3 !important;
+        }
+        
+        @media screen and (max-width: 690px) {
+            #loggin {
+                width: 90%!important;
+                padding: 4%!important;
+                min-height: auto!important;
+            }
+            .opciones-ingreso a {
+                font-size: 10.5px!important;
+            }
+            .texto-loggin {
+                font-size: 10px!important;
+            }
+        }
+        
+        @media screen and (min-width: 700px) {
+            #loggin {
+                width: 60%!important;
+                padding: 4%!important;
+            }
+        }
+        
+        @media screen and (min-width: 991.98px) {
+            #loggin {
+                width: 50%!important;
+                padding: 4%!important;
+            }
+            h6 {
+                text-align: center;
+                font-size: 16px!important;
+            }
+        }
+        
+        @media screen and (min-width: 1199.98px) {
+            #loggin {
+                width: 35%!important;
+                padding: 2.5%!important;
+            }
+            h6 {
+                text-align: center;
+                font-size: 16px!important;
+            }
+        }
+        
+        @media screen and (max-width: 1399.98px) {}
+        
+        .contenedor-login {
+            display: flex !important;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #loggin {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.308);
+            width: 30%;
+            min-height: 60%;
+            border-radius: 14px;
+            box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(24%);
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 2%;
+        }
+        
+        input {
+            border: 1px solid #D9D9D9;
+            border-radius: 9px;
+        }
+        
+        .texto-loggin {
+            text-align: center;
+            font-size: 16px!important;
+        }
+        
+        .form-loggin {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            font-size: 12px !important;
+            margin-top: 1rem;
+        }
+        
+        .form-loggin input {
+            width: 100%;
+            padding: 0.5rem;
+        }
+        
+        input:focus-visible {
+            border: 1px solid #D9D9D9 !important;
+            outline: 0;
+        }
+        
+        #btn_ingresar {
+            width: 100% !important;
+            background-color: #4B6181;
+            color: white;
+            font-size: 13.5px;
+            margin-top: 1rem;
+        }
+        
+        #btn_ingresar:hover {
+            background-color: #2e4569;
+            animation: ease-in-out;
+        }
+        
+        .opciones-ingreso {
+            color: #4B6181;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            justify-content: space-evenly;
+            font-size: 13.5px;
+            padding-top: 1rem;
+            width: 100%;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .opciones-ingreso a {
+            color: #4B6181;
+            text-decoration: none;
+        }
+        
+        .opciones-ingreso a:hover {
+            color: #3a4a63 !important;
+        }
+        
+        #passbtn {
+            position: sticky;
+            margin-left: -50px;
+            border: none!important;
+            border-color: none!important;
+        }
+        
+        #passbtn:hover {
+            border: none!important;
+            border-color: none!important;
+        }
+        
+        .input-pass {
+            width: 100%!important;
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="fluid-container vh-100">
+        <iframe src="./media/dist/index.html" frameborder="0" style="background-color:#ffffff;"></iframe>
+        <div class="fluid-container vh-100 contenedor-login">
+            <div id="loggin">
+                <div class="logo_senegocia">
+                    <img src="./media/logo_senegocia.png" alt="">
+                </div>
+                <div class="texto-loggin">Bienvenidos a la mejor plataforma de abastecimiento de América Latina</div>
+                <div class="form-loggin">
+                    <b>Usuario</b>
+                    <input class="input" type="text" placeholder="Ingresa tu nombre de usuario o correo electrónico" value="admin@snxv.test"></input>
+                </div>
+                <div class="form-loggin">
+                    <b>Contraseña</b>
+                    <div class="input-pass">
+                        <input class="input" type="password" placeholder="Ingresa tu contraseña" value="snxv2022" id="pass-text"></input>
+                        <button class="btn" id="passbtn" onclick="showPass()"><i class="fal fa-eye" style="color: #333!important;"></i></button>
+                    </div>
+                </div>
+                <div class="btn" id="btn_ingresar">Ingresar</div>
+                <div class="opciones-ingreso d-flex flex-row">
+                    <a href="#">¿Olvidaste tu contraseña?
+                    </a>
+                    <b style="opacity: 0;">s</b>
+                    <div style="border-left:1px solid #4B6181;"><b style="opacity: 0;">ss</b></div>
+                    <a href="#">No tengo cuenta</a>
+                </div>
+                <div class="logo_senegocia">
+                    <img src="./media/redes_sociales.png" alt="">
+                </div>
+            </div>
+        </div>
+        <script>
+            function showPass() {
+                var x = document.getElementById("pass-text");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+</html>
